@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+
+    /* Para prevenir el seleccionar texto con el doble-click */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.game-container {
+    text-align: center;
+}
+
+/* Filas y columnas */
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 40px);
+    grid-template-rows: repeat(8, 40px);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #bbb;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.cell.revealed {
+    background-color:aliceblue;
+}
+
+.cell.mine {
+    background-image: url(Bomba.webp);
+    background-size: cover;
+}
+
+.cell.flag {
+    background-image: url(Bandera.png);
+    background-size: cover;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2ecc71;
+}
+
+#mines-counter {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
